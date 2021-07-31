@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+     <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-analytics.js"></script> -->
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-firestore.js"></script>
+  <script src=" https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.24.4/sweetalert2.all.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.24.4/sweetalert2.css">
+
+
+
+
+
+  <title>Ejercicio D</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Ejercicio D</h1>
+        <p>
+          Desarrolla un formulario en javaScript donde puedas capturar,
+          validar y consultar la información capturada. (Los datos capturados
+          pueden ser 3 a tu elección, y que incluya al menos una validación,
+          el diseño puede ser a tu gusto)
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- D) Desarrolla un formulario en javaScript donde puedas capturar, validar y consultar
+la información capturada. (Los datos capturados pueden ser 3 a tu elección, y que
+incluya al menos una validación, el diseño puede ser a tu gusto) -->
+
+  <!-- Nombre completo, correo, teléfono -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <form>
+
+          <div class="form-group">
+            
+            
+            <label for="nombre">Nombre</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu Nombre completo" autofocus>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputEmail1">Correo electrónico</label>
+            <input type="email" class="form-control" id="correo" onClick="pruebaemail(correo.value);" placeholder="Ingresa tu correo">
+            
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input type="text" class="form-control" id="telefono" onblur="soloNumeros(this)"  placeholder="Ingresa tu teléfono">
+          </div>
+         
+          <button type="button" class="btn btn-primary" onclick="capturar_datos();" >Capturar</button>
+        </form>
+
+      </div>
+    </div>
+
+    <div></div>
+  </div>
+
+  <section class="mt-5">
+    <div class="container">
+      <div class="row">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Correo</th>
+              <th scope="col">Teléfono</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-datos">
+            <tr>
+              <!-- <th scope="row">1</th> -->
+              <!-- <td>Mark</td> -->
+              <!-- <td>Otto</td> -->
+              <!-- <td>@mdo</td> -->
+            </tr>
+            <tr>
+              <!-- <th scope="row">2</th> -->
+              <!-- <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td> -->
+            </tr>
+            <tr>
+              <!-- <th scope="row">3</th> -->
+              <!-- <td>Larry</td> -->
+              <!-- <td>the Bird</td> -->
+              <!-- <td>@twitter</td> -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="js/aplicacion.js"></script>
+  <script src="js/validaciones.js"></script>
+
+</html>
